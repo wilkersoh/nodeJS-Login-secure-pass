@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400i|Oswald');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color: #bdc3c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Login  */
+.login-wrap{
+    position: relative;
+    height: 20rem;
+    width: 350px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px #666;
+    background-color: #ecf0f1;
+}
+
+.login-title{
+    text-align: center;
+    font-weight: 200;
+    font-size: 2em;
+    color: #34495e;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.2em;
+    font-family: 'Crimson Text', serif;
+}
+
+input[type="text"],
+input[type="password"],
+button{
+    width: 85%;
+    height: 40px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+input[type="text"],
+input[type="password"]{
+    border:1px solid #bbb;  
+    padding: 0 0 0 10px;
+    font-size: 1em;
+    margin-bottom: 1.2em;
+}
+
+input:focus{
+    border:1px solid #3498db;
+}
+
+.login-button:hover,
+.welcome-register:hover{
+    background: #ec2711;
+}
+
+.login-register{
+    font-size: .7em;
+    margin-top: 12px;
+    color: #3498db;
+}
+
+
+.login-button,
+.welcome-register{
+    border:none;
+    color:white;
+    font-size: 1.3em;
+    font-weight: 200;
+    cursor: pointer;
+    background: #e74c3c;
+    transition: .4s ease;
+}
+
+.login-button::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    height: 5px;
+    border-radius: 5px 5px 0 0;
+    background:-webkit-linear-gradient(left,     
+        #27ae60 0%, #27ae60 20%, 
+        #8e44ad 20%, #8e44ad 40%,
+        #3498db 40%, #3498db 60%,
+        #e74c3c 60%, #e74c3c 80%,
+        #f1c40f 80%, #f1c40f 100%
+    );
+}
+
+/* Launding page */
+.welcome,
+.welcome-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.welcome h1{  
+    font-size: 7em;
+    color: goldenrod;
+    margin: 5px;
+}
+
+.welcome-buttons{
+    font-family: 'Crimson Text', serif;
+    font-weight: 300;
+}
+
+.welcome-buttons a{
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+    margin: .3em;
+    width: 85%;
+}
+
+.welcome-login{
+    font-size: 1.3em;
+    background-color: #999; 
+    transition: .5 ease-in-out;  
+}
+.welcome-login:hover{
+    background-color: #888;
+}
+
+
+
+
+
