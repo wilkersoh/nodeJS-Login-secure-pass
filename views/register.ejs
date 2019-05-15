@@ -1,12 +1,27 @@
 
 <div class="register-wrap">
     <h2 class="login-title">Register</h2>
+    <!-- <div class="errors">
+        <p>hello wolrd helo </p>
+        <button type="button" class="close">
+            <span>&times;</span>
+        </button>
+    </div> -->
+    <% include partials/messages %>
     
-    <form class="register-form" action="/users/login" method="POST">
-        <input class="register-input" type="text" placeholder="Username" name="name" autocomplete="off" />
-        <input type="email" class="email-input" name="email" placeholder="Email" />
-        <input class="register-input" type="password" placeholder="Password" name="password" />
-        <input type="password" name="password2" class="comfirm-password" placeholder="Comfirm Password" />
+    <form class="register-form" action="/users/register" method="POST">
+        <input class="register-input" type="text" placeholder="Username" name="name" autocomplete="off" 
+          value="<%= typeof name != 'undefined' ? name : '' %>"
+        />
+        <input type="email" class="email-input" name="email" placeholder="Email" 
+          value="<%= typeof email != 'undefined' ? email : '' %>"
+        />
+        <input class="register-input" type="password" placeholder="Password" name="password" 
+          value="<%= typeof password != 'undefined' ? password : '' %>"
+        />
+        <input type="password" name="password2" class="comfirm-password" placeholder="Comfirm Password" 
+          value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+        />
         <button type="submit" class="login-button">Register</button>
         <a class="login-register" href="/users/login">Already have a account?</a>
     </form>

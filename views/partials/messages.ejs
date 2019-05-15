@@ -1,0 +1,30 @@
+<!-- 如果有 error的话 才执行 -->
+<% if(typeof errors != 'undefined'){ %>
+    <% errors.forEach(error => { %>
+      <div class="errors">
+          <p><%= error.msg %></p>
+          <button type="button" class="close">
+              <span class="closeBtn">&times;</span>
+          </button>
+      </div>
+    <% }) %>
+<% } %>
+
+<!-- flash 的消息 -->
+<% if(success_msg != ''){ %>
+  <div class="errors success">
+    <p><%= success_msg %></p>
+    <button type="button" class="close">
+        <span class="closeBtn">&times;</span>
+    </button>
+  </div>
+<% } %>
+
+<% if(error_msg != ''){ %>
+  <div class="errors">
+    <p><%= error_msg %></p>
+    <button type="button" class="close">
+        <span class="closeBtn">&times;</span>
+    </button>
+  </div>
+<% } %>

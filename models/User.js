@@ -18,6 +18,7 @@ const UserSchema = new Schema({
     },
     date: {
         type: Date,
+        // now() 不需要parameter 属于mongoose
         default: Date.now
     }
 })

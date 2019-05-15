@@ -1,7 +1,7 @@
 
 <div class="login-wrap">
     <h2 class="login-title">Login</h2>
-    
+    <% include partials/messages %>
     <form class="login-form" action="/users/login" method="POST">
         <input class="login-input" type="text" placeholder="Username" name="name" autocomplete="off" />
         <input class="login-input" type="password" placeholder="Password" name="password" />

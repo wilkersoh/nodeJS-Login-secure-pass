@@ -25,6 +25,11 @@ body{
     background-color: #ecf0f1;
 }
 
+.register-wrap{
+    min-width: 400px;
+    border:1px solid rgba(161, 139, 11, 0.788);
+}
+
 .login-title{
     text-align: center;
     font-weight: 200;
@@ -61,7 +66,7 @@ input[type="password"]{
 }
 
 input:focus{
-    border:1px solid #3498db;
+    border:1px solid rgba(161, 139, 11, 0.788);
 }
 
 .comfirm-password input:focus{
@@ -74,7 +79,7 @@ input:focus{
 }
 
 .login-register{
-    font-size: .7em;
+    font-size: 1.1em;
     margin-top: 12px;
     color: #3498db;
 }
@@ -147,6 +152,33 @@ input:focus{
 .welcome-login:hover{
     background-color: #888;
 }
+
+/* errors partials */
+.errors{
+    position: relative;
+    display:flex;
+    margin: 7px;
+}
+.close{
+    position: absolute;
+    right: -2px;
+    top: -8px;
+    width: 10px;
+    height: 15px;
+    cursor: pointer;
+    border:none;
+    font-size: 1.3rem;
+    background-color: transparent;
+}
+.errors p {
+    padding: .8em;
+    margin:0 auto;
+    font-weight: 800;
+    width: 100%;
+    margin-bottom: 2px;
+    border:1px solid red;
+}
+
 
 
 
