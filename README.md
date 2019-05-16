@@ -1,3 +1,5 @@
+1. 可以用这个来登入 abc@hotmail.com && 123123123
+
 * bcrypt 密码加密
   
 ``` javascript
@@ -24,6 +26,12 @@ instanceFromDataBase.save()
 2. 如果沒有session 中間件 flash 不能使用
 3. session 必須在flash中間件上面
 
+``` javascript
+// 两个参数
+req.flash('success_msg', 'You are now registered.')
+// 第一个是 call success目标 第二个是 要渲染的信息
+```
+
 
 * ejs 假如沒有這個信息的話 就不顯示 需要這樣寫
 
@@ -33,3 +41,8 @@ instanceFromDataBase.save()
 ```
 
 * passport 去 config folder裏查看
+1. 还有 passport documentary里 configure-session code
+* Login的也会 copy 里面的 custom callback
+
+
+## Login form里不能放 a tag 那样通过passport插件validation会议桌跳出 Missing credential！ 好深的坑 。。。
