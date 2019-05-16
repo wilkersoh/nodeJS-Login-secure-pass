@@ -1,4 +1,6 @@
-1. 可以用这个来登入 abc@hotmail.com && 123123123
+1. npm install
+2. npm run dev
+3. login email- abc@hotmail.com && 123123123
 
 * bcrypt 密码加密
   
