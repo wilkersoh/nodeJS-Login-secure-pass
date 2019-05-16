@@ -1,5 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
+const passport = require('passport');
 
 
 // mongoose model
@@ -55,7 +56,7 @@ router.post('/register', (req, res) => {
           .then(user => {
             if(user){
                 // push to errors
-                errors.push({msg: 'Email is already register'})
+                errors.push({msg: 'Email is already registered'})
                 res.render('register', {
                     errors,
                     name,
@@ -86,9 +87,27 @@ router.post('/register', (req, res) => {
                       })
                 }))
             }
-          })
+        })
     }
 
+});
+
+// Login | check documentary!!!
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+        // 成功的话去这里
+        successRedirect: '/dashboard',
+        failureRedirect: '/users/login',
+        // badRequestMessage: 'Failed to Log in',
+        failureFlash: true
+    })(req, res, next)
+})
+
+// logout
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/users/login');
 })
 
 module.exports = router;
