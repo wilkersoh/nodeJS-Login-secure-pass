@@ -17,7 +17,7 @@ body{
 /* Login  */
 .login-wrap{
     position: relative;
-    height: 20rem;
+    min-height: 20rem;
     width: 350px;
     padding: 15px;
     border-radius: 5px;
@@ -81,8 +81,11 @@ input:focus{
 .login-register{
     font-size: 1.1em;
     margin-top: 12px;
+    text-align: center;
     color: #3498db;
 }
+/* 能置中我也不想去研究 干嘛5rem 跑去中间了 没问题就好 */
+.login{margin: 5rem; font-size: .8em;}
 
 
 .login-button,
